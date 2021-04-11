@@ -7,11 +7,6 @@
         z-index: 1;
     }
 
-    &__menu-item { 
-        border-radius: 5px;
-        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
-    }
-
     &__menu-button {
         display: flex;
         align-items: center;
@@ -54,15 +49,20 @@
 
     &--industry &__menu {
         width: 506px;
+        overflow: hidden;
+        padding: 10px;
+    }
+
+    &--industry &__menu-item {
+        transform: translateX(-110%);
     }
 
     &--industry &__menu-button {
         height: 114px;
         padding: 0 60px;
-    }
-
-    &--industry &__menu-item {
         background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
     }
 
     &--industry &__wrapper {

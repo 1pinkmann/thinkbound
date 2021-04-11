@@ -8,6 +8,7 @@ import Industry from './modules/industry/components/Industry';
 import Case from './modules/case/components/Case';
 
 function App() {
+
     return (
         <>
             <Header />

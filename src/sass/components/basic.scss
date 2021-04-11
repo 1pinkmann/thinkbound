@@ -47,6 +47,11 @@ input::-webkit-inner-spin-button {
     max-width: 1649px;
 }
 
+.text-mask {
+    display: flex;
+    overflow: hidden;
+}
+
 .side-text {
     position: absolute;
     right: 100%;

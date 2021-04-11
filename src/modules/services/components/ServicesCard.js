@@ -1,6 +1,11 @@
 import React from 'react'
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-export default function ServicesCard({item }) {
+gsap.registerPlugin(ScrollTrigger);
+
+export default function ServicesCard({ item }) {
+
     return (
         <li className={"services__card "}>
             <div className="services__card-icon">

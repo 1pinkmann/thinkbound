@@ -2,10 +2,11 @@
 
 .services { 
     display: flex;
-    margin-top: 214px;
     z-index: 2;
 
     &__text {
+        position: sticky;
+        top: 20px;
         font-size: 39px;
         font-family: $font-sb;
         line-height: 1.5;
@@ -39,6 +40,8 @@
         box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
         background-color: #ffffff;
         border-radius: 6px;
+
+        position: relative;
 
         transition: background-color 0.2s ease-in-out;
     }

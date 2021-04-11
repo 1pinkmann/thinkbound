@@ -56,7 +56,7 @@ export default function Services() {
         <section className="section services container">
             <SideText text='services'/>
             <div className="services__text-wrapper">
-                <div className="services__text services__text--small">Our Services</div>
+                {/* <div className="services__text services__text--small">Our Services</div> */}
                 <div className="services__text">Break through with Thinkbound Services</div>
             </div>
             <ul className="services__cards">
