@@ -1,0 +1,46 @@
+/*-------- Banner --------*/
+
+.banner {
+    padding-bottom: 202px;
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+
+    &__wrapper {
+        padding-top: 129px;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__title {
+        margin-top: 155px;
+
+        font-family: $font-b;
+        font-size: 124px;
+        color: #ffffff;
+        line-height: 1.2;
+    }
+
+    &__title-text--blue {
+        color: $blue;
+    }
+
+    &__text {
+        margin-top: 46px;
+
+        max-width: 671px;
+        font-family: $font-r;
+        font-size: 30px;
+        color: #ffffff;
+        line-height: 1.3;
+    }
+
+    &__buttons {
+        display: flex;
+        margin-top: 80px;
+    }
+
+    &__button:not(:first-child) {
+        margin-left: 18px;
+    }
+}

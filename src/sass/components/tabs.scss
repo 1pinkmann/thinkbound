@@ -1,0 +1,73 @@
+/*-------- Tabs --------*/
+
+.tabs {
+
+    &__menu {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__menu-item { 
+        border-radius: 5px;
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    &__menu-button {
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+
+        cursor: pointer;
+    }
+
+    &__menu-item:not(:first-child) {
+        margin-top: 32px;
+    }
+
+    &__menu-icon {
+        $size: 66px;
+        width: $size;
+        height: $size;
+
+        background-color: #e6e6e6;
+        border-radius: 50%;
+    }
+
+    &__menu-text {
+        margin-left: 30px;
+        font-size: 24px;
+        font-family: $font-sb;
+    }
+}
+
+.tabs {
+
+    &--industry {
+        display: flex;
+        align-items: flex-end;
+        height: 580px;
+        padding-bottom: 40px;
+
+        position: relative;
+    }
+
+    &--industry &__menu {
+        width: 506px;
+    }
+
+    &--industry &__menu-button {
+        height: 114px;
+        padding: 0 60px;
+    }
+
+    &--industry &__menu-item {
+        background-color: #ffffff;
+    }
+
+    &--industry &__wrapper {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}

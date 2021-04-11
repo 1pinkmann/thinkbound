@@ -1,0 +1,26 @@
+/*-------- Particles --------*/
+
+.particles {
+    position: absolute;
+}
+
+.particles {
+
+    &--reputation {
+        width: 1000px;
+        top: -155px;
+        right: -252px;
+        z-index: 1;
+        transform: rotateZ(47deg);
+    }
+}
+
+.particles {
+
+    &--case {
+        top: 0;
+        right: 0;
+        width: 1000px;
+        top: -200px;
+    }
+}

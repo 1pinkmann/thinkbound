@@ -1,0 +1,152 @@
+/*-------- Services --------*/
+
+.services { 
+    display: flex;
+    margin-top: 214px;
+    z-index: 2;
+
+    &__text {
+        font-size: 39px;
+        font-family: $font-sb;
+        line-height: 1.5;
+    }
+
+    &__text--small {
+        font-size: 18px;
+        color: $blue;
+    }
+
+    &__text-wrapper {
+        width: 35%;
+        padding-right: 38px;
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        width: 65%;
+        height: 978px;
+    }
+
+    &__card {
+        width: calc(50% - 14px);
+        height: calc(50% - 20px);
+
+        padding: 46px;
+
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+        background-color: #ffffff;
+        border-radius: 6px;
+
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    &__card:hover {
+        background-color: #1d4693;
+    }
+
+    &__card:hover &__card-link {
+        color: #ffffff;
+    }
+
+    &__card:hover &__card-title {
+        color: #ffffff;
+    }
+
+    &__card:hover &__card-link:before {
+        opacity: 0.5;
+    }
+
+    &__card:nth-child(n+3) {
+        margin-left: 25px;
+    }
+
+    &__card:nth-child(even) {
+        margin-top: 40px;
+    }
+
+    &__card:nth-child(3) {
+        height: calc(42% - 20px);
+    }
+
+    &__card:nth-child(4) {
+        height: calc(58% - 20px);
+    }
+
+    &__card-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+
+        $size: 103px;
+        width: $size;
+        height: $size;
+
+        background-color: #f3f3f3;
+        border-radius: 50%;
+    }
+
+    &__card-title {
+        margin-top: 44px;
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    &__card-list {
+        margin-top: 44px;
+    }
+
+    &__card-item {
+        display: flex;
+    }
+
+    &__card-item:not(:first-child) {
+        margin-top: 14px;
+    }
+
+    &__card-link {
+        padding-bottom: 8px;
+        font-family: $font-sb;
+        color: #000000;
+
+        position: relative;
+    }
+
+    &__card-link:before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: #e6e6e6;
+        position: absolute;
+        bottom: 0;
+
+        transition: background-color 0.19s ease-in-out;
+    }
+
+    &__card-link:hover::before {
+        background-color: #ffffff;
+    }
+
+    &__card-item .arrow {
+        margin-left: 5px;
+        opacity: 0;
+        visibility: hidden;
+
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    &__card-item:hover .arrow {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__card .arrow:before {
+        background-color: #ffffff;
+    }
+    
+    &__card .arrow:after {
+        border-color: #ffffff;
+    }
+}

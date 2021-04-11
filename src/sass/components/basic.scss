@@ -1,0 +1,61 @@
+/*-------- Basic --------*/
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+body {
+    font-family: $font-r;
+    color: #000000;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container--header {
+    max-width: 1649px;
+}
+
+.side-text {
+    position: absolute;
+    right: 100%;
+    top: 37%;
+
+    font-family: $font-b;
+    color: rgba(0, 0, 0, 0.07);
+    font-size: 76px;
+    transform: rotateZ(-90deg);
+
+    white-space: nowrap;
+}

@@ -1,0 +1,43 @@
+/*-------- Case --------*/
+
+.case {
+    padding-top: 106px;
+    padding-bottom: 64px;
+    overflow: hidden;
+    position: relative;
+
+    &__wrapper {
+        display: flex;
+        position: relative;
+    }
+
+    &__button {
+        display: inline-flex;
+        height: 52px;
+        padding: 0 43px;
+        margin-top: 70px;
+    }
+
+    &__list {
+        margin-top: 80px;
+    }
+
+    &__item:not(:first-child) {
+        margin-top: 45px;
+    }
+
+    &__item-title {
+        font-family: $font-sb;
+        color: $blue-dark;
+    }
+
+    &__item-text {
+        margin-top: 12px;
+        line-height: 1.4;
+    }
+
+    &__column {
+        width: 37%;
+        padding-right: 58px;
+    }
+}

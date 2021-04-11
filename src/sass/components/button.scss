@@ -1,0 +1,38 @@
+/*-------- Button --------*/
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 56px;
+    padding: 0 50px;
+
+    border: 1px solid $blue-med;
+    border-radius: 30px;
+
+
+    &__icon {
+        $size: 20px;
+        width: $size;
+        height: $size;
+
+        margin-right: 9px;
+    }
+
+    &__text {
+        font-family: $font-b;
+        color: #ffffff;
+    }
+
+    &__text--blue {
+        color: $blue-dark;
+    }
+}
+
+.button {
+
+    &--white {
+        border-color: #ffffff;
+    }
+}

@@ -1,0 +1,70 @@
+/*-------- Carousel --------*/
+
+.carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        $size: 30px;
+        width: $size;
+        height: $size;
+
+        position: absolute;
+
+        background-color: $blue-dark;
+        border-radius: 50%;
+
+        cursor: pointer;
+    }
+
+    &__button--left {
+        right: 174%;
+        transform: rotateY(180deg);
+    }
+
+    &__button--right {
+        left: 104%;
+    }
+
+    &__progress {
+        display: flex;
+        align-items: center;
+
+        position: absolute;
+        top: 100%;
+        left: 165px;
+        margin-top: 15px;
+    }
+
+    &__progress-count {
+        font-family: $font-b;
+        font-size: 15px;
+        color: #7f7f7f;
+    }
+
+    &__progress-count--blue {
+        color: #3c65a9;
+    }
+
+    &__progress-bar {
+        width: 108px;
+        height: 2px;
+
+        margin: 0 25px;
+
+        background-color: #d5d5d5;
+    }
+
+    &__progress-fill {
+        width: 100%;
+        height: 100%;
+        background-color: $blue-dark;
+        transform: scaleX(0.3);
+        transform-origin: left;
+    }
+}
