@@ -1,9 +1,11 @@
 /*-------- Carousel --------*/
 
 .carousel {
-    display: flex;
-    align-items: center;
-    position: relative;
+    // display: flex;
+    // align-items: center;
+    // position: relative;
+    width: 603px;
+    overflow: hidden;
 
     &__button {
         display: flex;

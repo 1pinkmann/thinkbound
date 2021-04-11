@@ -1,18 +1,27 @@
 import React from 'react'
-import { Particles } from 'react-particles-js';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import SwiperCore, { Navigation, Pagination } from 'swiper/core';
 
 import Button from '../../../common/Button'
-import Carousel from '../../../common/Carousel/Carousel'
 import SideText from '../../../common/SideText'
 import bg from '../../../images/case/card.png'
 
 import Params from '../../../particlesParams/particles.json';
+import { Particles } from 'react-particles-js';
+import CaseCard from './CaseCard';
+
+SwiperCore.use([Navigation, Pagination]);
 
 let gallery = [
-    { title: 'Vifloor', text: 'Web App Development', href: '#', bg: bg, id: 1 }
+    { title: 'Vifloor', text: 'Web App Development', href: '#', bg: bg, id: 1 },
+    { title: 'Vifloor', text: 'Web App Development', href: '#', bg: bg, id: 2 },
+    { title: 'Vifloor', text: 'Web App Development', href: '#', bg: bg, id: 3 },
+    { title: 'Vifloor', text: 'Web App Development', href: '#', bg: bg, id: 4 },
 ]
 
 export default function Case() {
+
     return (
         <section className="section case">
             <div className="title case__title container">
@@ -47,7 +56,22 @@ export default function Case() {
                     </ul>
                     <Button type='link' className='case__button' text='View Case study' textClass='button__text--blue' href='#' />
                 </div>
-                <Carousel gallery={gallery} />
+                <Swiper
+                    spaceBetween={40}
+                    slidesPerView={1}
+                    pagination
+                    navigation
+                    onSlideChange={() => console.log('slide change')}
+                    onSwiper={(swiper) => console.log(swiper)}
+                >
+                    {gallery.map(item => {
+                            return (
+                                <SwiperSlide className="carousel__item" key={item.id}>
+                                    <CaseCard item={item} />
+                                </SwiperSlide>
+                            );
+                        })}
+                </Swiper>
             </div>
         </section>
 

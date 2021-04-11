@@ -24,6 +24,10 @@ select {
   cursor: pointer;
 }
 
+// .swiper-wrapper {
+//     width: 603px !important;
+// }
+
 button {
     background-color: transparent;
     border: none;
@@ -63,4 +67,5 @@ input::-webkit-inner-spin-button {
     transform: rotateZ(-90deg);
 
     white-space: nowrap;
+    z-index: 12;
 }

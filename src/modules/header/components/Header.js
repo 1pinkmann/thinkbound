@@ -27,12 +27,13 @@ export default function Header() {
         
         ScrollTrigger.create({
             start: 100,
+            end: 'bottom',
             toggleClass: {
                 targets: '.header',
                 className: 'has-scrolled'
             },
             onEnter: ({direction}) => navAnimation(links, direction),
-            onLeaveBack: ({direction}) => navAnimation(links, direction),
+            onLeaveBack: ({direction}) => navAnimation(links, direction)
         })
     }, [])
 

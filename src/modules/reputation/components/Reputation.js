@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef} from 'react';
 import Particles from 'react-particles-js';
 
 import SideText from '../../../common/SideText';
@@ -17,57 +17,31 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Reputation() {
 
-    const [textLine, setTextLine] = useState(false);
-
     let textRefs = useRef([]);
 
     useEffect(() => {
-
         let textElements = textRefs.current;
 
-        // let currentTl = gsap.timeline({
-        //     defaults: {
-        //         duration: 1,
-        //         ease: 'none'
-        //     }
-        // });
-
-        ScrollTrigger.create({
-            start: textElements[0].getBoundingClientRect().top / 1.5,
-            // toggleClass: {
-            //     targets: textElements,
-            //     className: 'animation-out'
-            // },
-            onEnter: () => textLineAnim(textElements)
+        gsap.timeline({
+            defaults: {
+                duration: 1,
+            },
+            scrollTrigger: {
+                trigger: textElements[0],
+                start: "top center",
+                onEnter: ()  => animateTextLine(textElements)
+            }
         })
-
-        // textElements.forEach((element, i) => {
-
-        //     gsap
-        //         .set(element, {
-        //             delay: i * 2,
-        //             scrollTrigger: {
-        //                 trigger: textElements,
-        //                 start: 'top center',
-        //                 end: 'bottom top',
-        //                 toggleClass: {
-        //                     targets: element,
-        //                     className: 'animation-out'
-        //                 }
-        //             }
-        //         }, i * 2)
-
-        // })
     }, [])
 
-    function textLineAnim(textElements) {
-        textElements.forEach(element => {
-            element.classList.add('animation-out');
-            
-            setTimeout(() => {
-                element.classList.remove('animation-out'); 
-            }, 500);
-        });
+    function animateTextLine(textElements) {
+        
+        return gsap.set(textElements, {
+            duration: 0.3,
+            className: 'reputation__text-row animation-out',
+            stagger: 0.5,
+            ease: 'Power4.out'
+        })
     }
 
     return (
@@ -76,8 +50,8 @@ export default function Reputation() {
             <div className="reputation__wrapper container">
                 <SideText text='reputation' />
                 <div className="reputation__text">
-                    <div className={"reputation__text-row" + (textLine ? " animation-out" : "")} ref={el => textRefs.current.push(el)}>We develop innovative digitial solutions</div>
-                    <div className={"reputation__text-row" + (textLine ? " animation-out" : "")} ref={el => textRefs.current.push(el)}>for your organization’s transformational success</div>
+                    <div className="reputation__text-row" ref={el => textRefs.current.push(el)}>We develop innovative digitial solutions</div>
+                    <div className="reputation__text-row" ref={el => textRefs.current.push(el)}>for your organization’s transformational success</div>
                 </div>
                 <h2 className="reputation__title">Top Rated Amongst Industry Experts</h2>
                 <img src={circle} alt="" className="reputation__circle" />
