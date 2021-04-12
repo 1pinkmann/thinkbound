@@ -37,7 +37,7 @@ export default function Case() {
             </div>
             <CustomParticles modificator="case" />
             <div className="case__wrapper container">
-                <SideText text='case studies' sideTextRef={sideTextRef} />
+                <SideText text='case studies' modificator="case" sideTextRef={sideTextRef} />
                 <div className="case__column">
                     <ul className="case__list">
                         <li className="case__item">

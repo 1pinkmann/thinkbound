@@ -17,7 +17,7 @@ export default function animateSideTextParallax(wrapper, element) {
     });
 
     parallaxTl
-        .to(element, {
+        .from(element, {
             yPercent: 30
         })
 }

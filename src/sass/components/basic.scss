@@ -71,7 +71,15 @@ input::-webkit-inner-spin-button {
     white-space: nowrap;
     z-index: 12;
 
-    &--reputation {
-        top: 0;
+    &--services {
+        top: 211px;
+    }
+
+    &--industry {
+        top: 74px;
+    }
+
+    &--case {
+        top: 20px;
     }
 }

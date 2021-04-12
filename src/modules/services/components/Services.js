@@ -75,7 +75,7 @@ export default function Services() {
 
     return (
         <section className="section services container" ref={servicesWrapperRef}>
-            <SideText text='services' sideTextRef={sideTextRef}/>
+            <SideText text='services' modificator="services" sideTextRef={sideTextRef}/>
             <div className="services__text-wrapper">
                 <div className="services__text services__text--small">Our Services</div>
                 <div className="services__text services__text--sticky">Break through with Thinkbound Services</div>
