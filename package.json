@@ -2,7 +2,7 @@
   "name": "thinkbound-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://1pinkmann.github.io/thinkbound/",
+  "homepage": "https://1pinkmann.github.io/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
