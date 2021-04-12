@@ -10,6 +10,7 @@ import itemImage from '../../../images/case/case-image.png';
 import Params from '../../../particlesParams/particles.json';
 import { Particles } from 'react-particles-js';
 import CaseCard from './CaseCard';
+import CustomSwiper from './../../../common/CustomSwiper/CustomSwiper';
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -21,37 +22,6 @@ let gallery = [
 ]
 
 export default function Case() {
-
-    const [slides, setSlides] = useState({});
-
-    useEffect(() => {
-        const swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
-            spaceBetween: 40,
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'progressbar'
-            },
-            navigation: {
-                prevEl: '.swiper-button--left',
-                nextEl: '.swiper-button--right',
-            },
-            grabCursor: true,
-        });
-
-        setSlides({
-            total: swiper.slides.length,
-            current: 1
-        });
-
-
-        swiper.on('slideChange', () => {
-            setSlides({
-                total: swiper.slides.length,
-                current: ++swiper.realIndex
-            })
-        })
-    }, [])
 
     return (
         <section className="section case">
@@ -87,30 +57,7 @@ export default function Case() {
                     </ul>
                     <Button type='link' className='case__button' text='View Case study' textClass='button__text--blue' href='#' />
                 </div>
-                <div className="swiper">
-                    <div className="swiper-container">
-                        <ul className="swiper-wrapper">
-                            {gallery.map(item => {
-                                return (
-                                    <li className="swiper-slide" key={item.id}>
-                                        <CaseCard item={item} />
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </div>
-                    <div className="swiper-pagination-wrapper">
-                        <span className="swiper-pagination-count swiper-pagination-count--left" id="current">{slides.current}</span>
-                        <span className="swiper-pagination"></span>
-                        <span className="swiper-pagination-count swiper-pagination-count--right" id="total">{slides.total}</span>
-                    </div>
-                    <button className="swiper-button swiper-button--left">
-                        <span className="arrow arrow--v2"></span>
-                    </button>
-                    <button className="swiper-button swiper-button--right">
-                        <span className="arrow arrow--v2"></span>
-                    </button>
-                </div>
+                <CustomSwiper gallery={gallery} Component={CaseCard} />
             </div>
         </section>
 
