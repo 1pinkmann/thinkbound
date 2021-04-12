@@ -25,11 +25,37 @@
     }
 
     &__menu-link {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 5px;
         font-family: $font-b;
         color: #ffffff;
     }
 
-    &__menu-link:hover, &__menu-link.active {
+    &__menu-link::after {
+        display: block;
+        content: "";
+        height: 1px;
+        background-color: $blue;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        transform: translateX(-101%);
+    }
+
+    &__menu-link:hover::after {
+        transition: transform 0.3s ease-out;
+        transform: translateX(0);
+    }
+
+    &__menu-link.animate-out::after {
+        transition: transform 0.3s ease-out;
+        transform: translateX(101%);
+    }
+
+    &__menu-link:hover,
+    &__menu-link.active {
         color: $blue;
     }
 

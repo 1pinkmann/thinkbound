@@ -37,6 +37,15 @@ export default function Header() {
         })
     }, [])
 
+    function addLinkClass(e) {
+        e.target.classList.add('animate-out');
+    }
+
+    function removeLinkClass(e) {
+        console.log(e.target);
+        e.target.classList.remove('animate-out');
+    }
+
     return (
         <header className="header">
             <div className="header__wrapper container container--header">
@@ -46,7 +55,7 @@ export default function Header() {
                 <ul className="header__menu">
                     {navLinks.map((item, i) => {
                         return (
-                            <li ref={el => itemsRef.current.push(el)} key={item.id} className="header__menu-item">
+                            <li onMouseLeave={addLinkClass} onTransitionEnd={removeLinkClass} ref={el => itemsRef.current.push(el)} key={item.id} className="header__menu-item">
                                 <a href="/" className={"header__menu-link" + (i === 0 ? " active" : "")}>{item.title}</a>
                             </li>
                         );
