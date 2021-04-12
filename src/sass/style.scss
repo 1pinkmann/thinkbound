@@ -2,6 +2,11 @@ $blue: #4ebeff;
 $blue-med: #2a9df4;
 $blue-dark: #244397;
 
+$colors: (
+  'white': #ffffff,
+  'black': #000000,
+) !default;
+
 $font-el: 'Manrope-ExtraLight';
 $font-l: 'Manrope-Light';
 $font-r: 'Manrope-Regular';
