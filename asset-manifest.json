@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/thinkbound/static/css/main.302a4fc5.chunk.css",
+    "main.js": "/thinkbound/static/js/main.cd1bf905.chunk.js",
+    "main.js.map": "/thinkbound/static/js/main.cd1bf905.chunk.js.map",
+    "runtime-main.js": "/thinkbound/static/js/runtime-main.9039c591.js",
+    "runtime-main.js.map": "/thinkbound/static/js/runtime-main.9039c591.js.map",
+    "static/js/2.2da31a89.chunk.js": "/thinkbound/static/js/2.2da31a89.chunk.js",
+    "static/js/2.2da31a89.chunk.js.map": "/thinkbound/static/js/2.2da31a89.chunk.js.map",
+    "index.html": "/thinkbound/index.html",
+    "static/css/main.302a4fc5.chunk.css.map": "/thinkbound/static/css/main.302a4fc5.chunk.css.map",
+    "static/js/2.2da31a89.chunk.js.LICENSE.txt": "/thinkbound/static/js/2.2da31a89.chunk.js.LICENSE.txt",
+    "static/media/card.69814290.png": "/thinkbound/static/media/card.69814290.png",
+    "static/media/circle.8d11cdf0.png": "/thinkbound/static/media/circle.8d11cdf0.png",
+    "static/media/expanding-bg.2c60942c.png": "/thinkbound/static/media/expanding-bg.2c60942c.png",
+    "static/media/img1.49352683.png": "/thinkbound/static/media/img1.49352683.png",
+    "static/media/img2.dda92b03.png": "/thinkbound/static/media/img2.dda92b03.png",
+    "static/media/img3.f663d1f5.png": "/thinkbound/static/media/img3.f663d1f5.png",
+    "static/media/img4.315bed3b.png": "/thinkbound/static/media/img4.315bed3b.png",
+    "static/media/stylesheet.css": "/thinkbound/static/media/subset-Manrope-SemiBold.95ea73e8.ttf",
+    "static/media/video.28ce1e24.mp4": "/thinkbound/static/media/video.28ce1e24.mp4"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9039c591.js",
+    "static/js/2.2da31a89.chunk.js",
+    "static/css/main.302a4fc5.chunk.css",
+    "static/js/main.cd1bf905.chunk.js"
+  ]
+}
