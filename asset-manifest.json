@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.70309826.chunk.css",
-    "main.js": "/static/js/main.f42fe17e.chunk.js",
-    "main.js.map": "/static/js/main.f42fe17e.chunk.js.map",
+    "main.css": "/static/css/main.e5226d33.chunk.css",
+    "main.js": "/static/js/main.19dbb2d4.chunk.js",
+    "main.js.map": "/static/js/main.19dbb2d4.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e993c9a6.js",
     "runtime-main.js.map": "/static/js/runtime-main.e993c9a6.js.map",
     "static/js/2.2da31a89.chunk.js": "/static/js/2.2da31a89.chunk.js",
     "static/js/2.2da31a89.chunk.js.map": "/static/js/2.2da31a89.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.70309826.chunk.css.map": "/static/css/main.70309826.chunk.css.map",
+    "static/css/main.e5226d33.chunk.css.map": "/static/css/main.e5226d33.chunk.css.map",
     "static/js/2.2da31a89.chunk.js.LICENSE.txt": "/static/js/2.2da31a89.chunk.js.LICENSE.txt",
     "static/media/card.69814290.png": "/static/media/card.69814290.png",
     "static/media/circle.8d11cdf0.png": "/static/media/circle.8d11cdf0.png",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.e993c9a6.js",
     "static/js/2.2da31a89.chunk.js",
-    "static/css/main.70309826.chunk.css",
-    "static/js/main.f42fe17e.chunk.js"
+    "static/css/main.e5226d33.chunk.css",
+    "static/js/main.19dbb2d4.chunk.js"
   ]
 }
