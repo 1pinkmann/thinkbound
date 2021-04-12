@@ -24,7 +24,7 @@ export default function Header() {
 
     useEffect(() => {
         let links = itemsRef.current;
-        
+
         ScrollTrigger.create({
             start: 100,
             end: 'bottom',
@@ -32,21 +32,10 @@ export default function Header() {
                 targets: '.header',
                 className: 'has-scrolled'
             },
-            onEnter: ({direction}) => navAnimation(links, direction),
-            onLeaveBack: ({direction}) => navAnimation(links, direction)
+            onEnter: ({ direction }) => navAnimation(links, direction),
+            onLeaveBack: ({ direction }) => navAnimation(links, direction)
         })
     }, [])
-
-    function navAnimation (links, direction) {
-        const down = direction === 1;
-        return gsap.to(links, {
-            duration: 0.3,
-            stagger: 0.05,
-            autoAlpha: () => down ? 0 : 1,
-            y: () => down ? 20 : 0,
-            ease: 'Power4.out'
-        })
-    }
 
     return (
         <header className="header">
@@ -66,6 +55,16 @@ export default function Header() {
                 <Button type='link' icon={thinkboungLogo} href="" className="header__button" text="Start project" />
             </div>
         </header>
-
     )
+}
+
+function navAnimation(links, direction) {
+    const down = direction === 1;
+    return gsap.to(links, {
+        duration: 0.3,
+        stagger: 0.05,
+        autoAlpha: () => down ? 0 : 1,
+        y: () => down ? 20 : 0,
+        ease: 'Power4.out'
+    })
 }

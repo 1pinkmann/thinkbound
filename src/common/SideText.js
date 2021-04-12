@@ -1,7 +1,8 @@
 import React from 'react'
 
-export default function SideText({text}) {
+export default function SideText({text, modificator, sideTextRef}) {
     return (
-        <div className="side-text">{text}</div>
+        <div ref={sideTextRef} className={"side-text" + (modificator ? " side-text--" + modificator : "")}>{text}</div>
     )
 }
+

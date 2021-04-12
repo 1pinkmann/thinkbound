@@ -1,18 +1,14 @@
-import React, { useEffect, useState } from 'react'
-
-import SwiperCore, { Navigation, Pagination, Swiper } from 'swiper/core';
+import React, { useEffect, useRef } from 'react'
 
 import Button from '../../../common/Button'
 import SideText from '../../../common/SideText'
 import bg from '../../../images/case/card.png'
 import itemImage from '../../../images/case/case-image.png';
 
-import Params from '../../../particlesParams/particles.json';
-import { Particles } from 'react-particles-js';
 import CaseCard from './CaseCard';
 import CustomSwiper from './../../../common/CustomSwiper/CustomSwiper';
-
-SwiperCore.use([Navigation, Pagination]);
+import CustomParticles from '../../../common/CustomParticles/CustomParticles';
+import animateSideTextParallax from '../../../services/animateSideTextParallax';
 
 let gallery = [
     { title: 'Vifloor', text: 'Web App Development', href: '#', bg: bg, id: 1 },
@@ -23,15 +19,25 @@ let gallery = [
 
 export default function Case() {
 
+    let caseWrapperRef = useRef(null);
+    let sideTextRef = useRef(null);
+
+    useEffect(() => {
+        let caseWrapperElement = caseWrapperRef.current;
+        let sideTextElement = sideTextRef.current;
+
+        animateSideTextParallax(caseWrapperElement, sideTextElement);
+    }, [])
+
     return (
-        <section className="section case">
+        <section className="section case" ref={caseWrapperRef}>
             <div className="title case__title container">
                 <div className="title__cat">Case Studies</div>
                 <h1>Success Stories</h1>
             </div>
-            <Particles params={Params} className="particles particles--case" />
+            <CustomParticles modificator="case" />
             <div className="case__wrapper container">
-                <SideText text='case studies' />
+                <SideText text='case studies' sideTextRef={sideTextRef} />
                 <div className="case__column">
                     <ul className="case__list">
                         <li className="case__item">

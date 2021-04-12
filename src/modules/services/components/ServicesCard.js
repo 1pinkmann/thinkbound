@@ -4,10 +4,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function ServicesCard({ item }) {
+export default function ServicesCard({ item, refs }) {
 
     return (
-        <li className={"services__card "}>
+        <li ref={el => refs.current.push(el)} className={"services__card "}>
             <div className="services__card-icon">
                 <img src={item.icon} alt="" className="services__card-image" />
             </div>

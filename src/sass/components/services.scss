@@ -5,11 +5,14 @@
     z-index: 2;
 
     &__text {
-        position: sticky;
-        top: 20px;
         font-size: 39px;
         font-family: $font-sb;
         line-height: 1.5;
+    }
+
+    &__text--sticky {
+        position: sticky;
+        top: 20px;
     }
 
     &__text--small {

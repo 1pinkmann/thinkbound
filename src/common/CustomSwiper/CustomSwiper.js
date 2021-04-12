@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import CustomSwiperPagination from './CustomSwiperPagination';
-import { Swiper } from 'swiper/core';
+import SwiperCore, { Navigation, Pagination, Swiper } from 'swiper/core';
+
+SwiperCore.use([Navigation, Pagination]);
 
 export default function CustomSwiper({gallery, Component}) {
 
